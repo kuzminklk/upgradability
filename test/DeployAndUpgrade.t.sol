@@ -33,6 +33,6 @@ contract DeployAndUpgrade is Test {
 
 	function testUpgrade() public {
 		valueContractViaProxy = upgrader.upgrade(address(valueContractViaProxy));
-		assertEq(valueContractViaProxy.version(), 2);
+		assertEq(valueContractViaProxy.VERSION(), 2);
 	}
 }

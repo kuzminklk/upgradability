@@ -15,8 +15,8 @@ import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/O
  * @dev Uses UUPS
  */
 contract Value is UUPSUpgradeable, Initializable, OwnableUpgradeable {
+	uint256 public constant VERSION = 1;
 	uint256 public s_value;
-	uint256 public version = 1;
 
 	// Use initialize() in proxy instead of constructor(). Because constructor() sets storage to implementation, not the proxy
 	function initialize() public initializer {
